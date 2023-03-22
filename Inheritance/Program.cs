@@ -29,11 +29,34 @@ namespace Inheritance
              * Creatively display the class member values 
              */
 
+            var woodpecker = new Bird();
+            woodpecker.CareForYoung = true;
+            woodpecker.BeakLength = 4.3;
+            woodpecker.Migratory = true;
+            woodpecker.Monogamous = false;
+
             /*Create an object of your Reptile class
              *  give values to your members using the object of your Reptile class
              *  
              * Creatively display the class member values 
              */
+
+            var rattlesnake = new Reptile();
+            rattlesnake.HeartChambers = 3;
+            rattlesnake.IsScaly = true;
+            rattlesnake.Habitat = "rocks";
+            rattlesnake.TailRegeneration = false;
+
+            var misAnimales = new Animal[] { woodpecker, rattlesnake };
+
+            foreach( var animal in misAnimales)
+            {
+                Console.WriteLine($"Legs: {animal.LegCount}");
+                Console.WriteLine($"Mammalian? {animal.IsMammal}");
+                Console.WriteLine($"Diet? {animal.Diet}");
+                Console.WriteLine($"Amphibious? {animal.Amphibious}");
+                Console.WriteLine("");
+            }
         }
     }
 }
